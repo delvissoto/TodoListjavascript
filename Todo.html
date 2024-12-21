@@ -5,81 +5,54 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>ToDOList</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
    <link rel="stylesheet" href="Todo.css" />
 </head>
 
 <body onload="check()" style="background-color:azure;">
-    <div class="container my-4">
-        <button type="button" class="btn btn-dark" onclick="routePage()" style="float:right;">Show All List</button>
+    <div class="button-container">
+        <button type="button" onclick="routePage()" class="show-all-button">Show All List</button>
     </div>
-    <h2 style="text-align:center; margin:30px; color:rgb(92, 21, 60);">ToDO List</h2>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"></script>
-      <form action="">
-          <div class="container my-4">
-             <div class="mb-3">
-                <label><b>Title:<span style="color:#ff0000">*</span></b></label></br>
-                <input type="text" id="taskTitle" class="form-control" placeholder="Enter Title">
-                <small id="emptytitle" class="color"></small>
-             </div>
-             <div class="mb-3">
-                 <label><b>Description:<span style="color:#ff0000">*</span></b></label>
-                 <textarea class="form-control" id="taskDesc" rows="3" placeholder="Type here....."></textarea>
-                 <small id="emptyDes" class="color"></small>
-             </div>
-             <div class="mb-3">
-                 <label><b>StartDate:<span style="color:#ff0000">*</span></b></label>
-                 <input type="Date" id="sdate" class="form-control" style="width:250px;">
-                 <small id="emptysdate" class="color"></small></br>
-                 <label><b>EndDate:<span style="color:#ff0000">*</span></b></label>
-                 <input type="Date" id="edate" class="form-control" style="width:250px;">
-                 <small id="emptyedate" class="color"></small>
-             </div>
-             <div class="mb-3">
-                 <label for="todo"><b>Status:<span style="color:#ff0000">*</span></b></label>
-                 <select name="todo" id="tstatus" class="form-control" style="width:250px;">
-                      <option value="">Select Status</option>
-                      <option value="Inprogress">In progress</option>
-                      <option value="Todo">Todo</option>
-                      <option value="Completed">Completed</option>
-                 </select>
-                 <small id="emptystatus" class="color"></small>
-             </div>
-                 <input type="button" style="color:black; background-color:gray; border-radius: 10px; width:100px;" value="ADD LIST"
-                        onclick="addData()" id="addtask">
-                 <input type="button" style="color:black; background-color:brown; border-radius: 10px;" value="Update"
-                        id="update">
-                 <input type="Reset" id="reset" style="color:black; background-color:gray; border-radius: 10px; width:100px;" value="RESET">
+    <h2 class="todo-title">ToDO List</h2>
+    
+    <form action="">
+        <div class="form-container">
+            <div class="form-group">
+                <label for="taskTitle" class="label">Title:<span class="required">*</span></label><br>
+                <input type="text" id="taskTitle" class="input-field" placeholder="Enter Title">
+                <small id="emptytitle" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="taskDesc" class="label">Description:<span class="required">*</span></label><br>
+                <textarea id="taskDesc" rows="3" class="input-field" placeholder="Type here....."></textarea>
+                <small id="emptyDes" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="sdate" class="label">Start Date:<span class="required">*</span></label><br>
+                <input type="date" id="sdate" class="input-field">
+                <small id="emptysdate" class="error-message"></small><br><br>
+                <label for="edate" class="label">End Date:<span class="required">*</span></label><br>
+                <input type="date" id="edate" class="input-field">
+                <small id="emptyedate" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="tstatus" class="label">Status:<span class="required">*</span></label><br>
+                <select name="todo" id="tstatus" class="input-field">
+                    <option value="">Select Status</option>
+                    <option value="Inprogress">In progress</option>
+                    <option value="Todo">Todo</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <small id="emptystatus" class="error-message"></small>
+            </div>
+            <div class="button-group">
+                <input type="button" value="ADD LIST" onclick="addData()" id="addtask" class="btn-add">
+                <input type="button" value="Update" id="update" class="btn-update">
+                <input type="reset" id="reset" value="RESET" class="btn-reset">
+            </div>
+        </div>
+    </form>
 
-                </br>
-                 <!-- <div id="container">
-                  <h3 style="text-align:center">Todo list Data</h3>
-                  <table id="todotable" class="table">
-                   <thead>
-                      <tr>
-                         <th>Title</th>
-                        <th>Description</th>
-                        <th>StartDate</th>
-                        <th>EndDate</th>
-                        <th>Status</th>
-                     </tr>
-                  <tbody>
-
-                   </tbody id="table">
-                  </thead>
-  
-                 </table>
-
-                </div> -->
-             </div>
-
-         </div>
-
-      </form>
-     <script src="ToDo.js"></script>
+    <script src="ToDo.js"></script>
 </body>
 
 </html>

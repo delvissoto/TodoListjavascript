@@ -1,15 +1,4 @@
 
-// function setData() {
-//     if (validateform() == true) {
-//         let taskTitle = document.getElementById("taskTitle").value;
-//         let taskDesc = document.getElementById("taskDesc").value;
-//         let sdate = document.getElementById("sdate").value;
-//         let edate = document.getElementById("edate").value;
-//         let tstatus = document.getElementById("tstatus").value;
-
-//         console.log(taskTitle + " " + taskDesc + " " + sdate + " " + edate + " " + tstatus);
-//     }
-// }
 
 validateform = () => {
     let taskTitle = document.getElementById('taskTitle').value;
@@ -18,29 +7,6 @@ validateform = () => {
     let edate = document.getElementById("edate").value;
     let tstatus = document.getElementById("tstatus").value;
     
-//     if (taskTitle == "") {
-//         alert("Please Enter a Title");
-//         return false;
-//     }
-//     else if (taskDesc == "") {
-//         alert("Please Enter a Description");
-//         return false;
-//     }
-
-//     else if (sdate == "") {
-//         alert("Please Enter a Starting Date");
-//         return false;
-//     }
-
-//     else if (edate == "") {
-//         alert("Please Enter a Ending Date");
-//         return false;
-//     }
-//     else if (tstatus == "") {
-//         alert("Please Select a Status");
-//         return false;
-//     }
-//     return true;
 
       if(taskTitle == ""){
         document.getElementById("emptytitle").innerHTML="*Please Enter a Title";
@@ -126,7 +92,7 @@ showlist = () => {
     document.querySelector("#todotable tbody").innerHTML = html;
 
 };
-// document.onload = showlist();
+
 
 addData = () => {
     if (validateform() == true) {
@@ -135,7 +101,7 @@ addData = () => {
         let sdate = document.getElementById("sdate").value;
         let edate = document.getElementById("edate").value;
         let tstatus = document.getElementById("tstatus").value;
-        //window.location.href(Todolist.html);
+     
         let list;
         if (localStorage.getItem("list") == null) {
             list = [];
@@ -178,10 +144,9 @@ editId = (index) => {
 editlist = (index) => {
     document.getElementById("addtask").style.display = "none";
     document.getElementById("update").style.display = "inline-block";
-    //document.getElementById("reset").style.display = "none";
 
 
-    // console.log("done");
+
     if (localStorage.getItem("list") == null) {
         list = [];
     } else {

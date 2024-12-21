@@ -7,3 +7,180 @@
     text-align:right;
     color:red;
 }
+/* General Styles */
+body {
+    background-color: azure;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button, input[type="button"], input[type="reset"], select, textarea, input[type="text"], input[type="date"] {
+    margin: 5px 0;
+}
+
+/* Button Container */
+.button-container {
+    padding: 20px;
+}
+
+.show-all-button {
+    float: right;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.show-all-button:hover {
+    background-color: #555;
+}
+
+/* Todo Title */
+.todo-title {
+    text-align: center;
+    margin: 30px;
+    color: rgb(92, 21, 60);
+}
+
+/* Form Container */
+.form-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label Styles */
+.label {
+    font-weight: bold;
+}
+
+.required {
+    color: red;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field[type="date"] {
+    width: 250px;
+}
+
+textarea.input-field {
+    resize: vertical;
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+}
+
+/* Button Group */
+.button-group input[type="button"], .button-group input[type="reset"] {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.btn-add {
+    background-color: gray;
+    color: black;
+}
+
+.btn-update {
+    background-color: brown;
+    color: black;
+}
+
+.btn-reset {
+    background-color: gray;
+    color: black;
+}
+
+/* Button Hover Effects */
+.btn-add:hover, .btn-update:hover, .btn-reset:hover {
+    opacity: 0.8;
+}
+
+/* Table Styles */
+.todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.todo-table th, .todo-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table-header {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+/* Table Row Hover Effect */
+.todo-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.todo-table td {
+    text-align: center;
+}
+
+/* Specific Styles for the ToDo Form */
+form {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="reset"], input[type="button"] {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="reset"]:hover, input[type="button"]:hover {
+    background-color: #ddd;
+}
+
+/* Todo List Container */
+.todo-list-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.todo-list-title {
+    text-align: center;
+    margin: 30px;
+    color: rgb(92, 21, 60);
+    font-size: 24px;
+}
